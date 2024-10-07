@@ -1,0 +1,39 @@
+ .slide{
+margin-top: 25px;
+min-height: 100vh;
+}
+
+
+// .carousel-control-next, .carousel-control-prev{
+//     border-radius: 50%;
+//     background-color: white ;
+//     width: 60px;
+//     height: 60px;
+//     top: 50%;
+//     display: none;
+// }
+// .carousel-inner:hover .carousel-control-next, .carousel-control-prev{
+//     background-color: #FF535B;
+// }
+.carousel-control-next, .carousel-control-prev {
+    border-radius: 50%;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Show controls when hovering over the carousel inner */
+.carousel-inner:hover .carousel-control-next, 
+.carousel-inner:hover .carousel-control-prev {
+    display: flex; /* Show the controls on hover */
+    background-color: #FF535B; /* Change background color */
+}
+
+/* Optional: Add hover effects for better user experience */
+.carousel-control-next:hover, .carousel-control-prev:hover {
+    background-color: #FF2F3C; /* Darker shade on hover */
+}
