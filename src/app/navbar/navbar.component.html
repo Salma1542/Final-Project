@@ -1,4 +1,4 @@
- <nav class="navbar navbar-expand-lg bg-body-tertiary main-nav">
+ <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary main-nav">
     <div class="container"> 
         <div class="social-icons">
        <a href="https://www.facebook.com/"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -8,11 +8,9 @@
     </div>
 <img src="./assets/images/logo-dark.png" alt="">
 <div class="user-icons">
- <!-- <i class="fa fa-search search" aria-hidden="true"></i> -->
  
 <i class="fa fa-search search" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#searchModal"></i>
 
-<!-- Modal -->
 <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -38,7 +36,7 @@
 
 </div>
 </div>
-  </nav>
+  </nav> -->
   <div class="container">
     <nav class="navbar navbar-expand-lg bg-body-tertiary second-main">
         <div class="container">
@@ -46,33 +44,32 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <img src="./assets/images/hat-chef-logo.jpg" alt="" width="90" height="90">
+            <h2 class="logo-txt me-4">Chefify</h2>
+            <input class="form-control me-2 search-box" type="search" placeholder="What Would You like to cook?" aria-label="Search">
+
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active "style="color:#FF535B" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Category</a>
+                <a class="nav-link active "style="color:orange" aria-current="page" href="#">What to cook</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Recipes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Pages</a>
+                <a class="nav-link active" aria-current="page" href="#">Ingredients</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Elements</a>
+                <a class="nav-link active" aria-current="page" href="#">Occasions</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                <a class="nav-link active" aria-current="page" href="#">About Us</a>
               </li>
             </ul>
             <form class="d-flex align-items-center" role="search">
-                <a href="#" class="login-btn">Login</a>
-              <button class="btn btn-outline-success rounded-pill nav-btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i>
-                Submit Recipe</button>
+              <button type="button" class="btn light">Login</button>
+              <button type="button" class="btn secondary">Subscribe</button>
+
             </form>
           </div>
         </div>

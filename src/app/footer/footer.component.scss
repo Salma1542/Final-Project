@@ -1,7 +1,38 @@
-footer{
-    min-height:320px;
+// footer{
+//     min-height:320px;
     
-}
-.logo{
-    margin-top: 50px;
-}
+// }
+// .logo{
+//     margin-top: 50px;
+// }
+footer {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  footer h5 {
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer .input-group .form-control {
+    border-radius: 0;
+  }
+  
+  footer .input-group .btn {
+    border-radius: 0;
+    background-color: orange;
+    color: white;
+  }
+  
+  footer .input-group .btn:hover {
+    background-color: orange;
+  }
+  
+  footer .border-top {
+    border-color: #444 !important;
+  }
+  

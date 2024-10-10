@@ -16,9 +16,7 @@ color: gray;
     border-right: 1px solid black;
     padding: 8px;
 }
-.social-icons i:hover{
-    color: #FF535B;
-}
+
 .second-main{
     background-color:white !important;
 margin-top: 20px;
@@ -44,7 +42,7 @@ margin-top: 20px;
     font-weight: 600;
 }
 .nav-item a:hover{
-    color: #FF535B;
+    color: orange;
 }
 .fa-shopping-bag{
     position: relative;
@@ -56,4 +54,20 @@ margin-top: 20px;
     right: -10px;
     color: black;
     
+  }
+  .logo-txt{
+    color:orange;
+  }
+  .search-box{
+    width: 250px;
+    padding: 7px;
+  }
+  .light{
+    color: orange;
+    margin-right: 10px;
+    background-color: rgb(244, 237, 237);
+  }
+  .secondary{
+    background-color: orange;
+    color: white;
   }

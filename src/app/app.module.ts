@@ -7,13 +7,18 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeCarsoulComponent } from './home-carsoul/home-carsoul.component';
 import { FooterComponent } from './footer/footer.component';
+import { RecipeCardsComponent } from './recipe-cards/recipe-cards.component';
+import { RecipeCardItemComponent } from './recipe-cards/recipe-card-item/recipe-card-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeCarsoulComponent,
-    FooterComponent
+    FooterComponent,
+    RecipeCardsComponent,
+    RecipeCardItemComponent,
+    // RecipesComponent,
   ],
   imports: [
     BrowserModule,
