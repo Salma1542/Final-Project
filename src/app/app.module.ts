@@ -18,7 +18,6 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     RecipeCardsComponent,
     AddPostComponent,
-    // RecipesComponent,
   ],
   imports: [
     BrowserModule,
