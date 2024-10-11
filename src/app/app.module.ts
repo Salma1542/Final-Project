@@ -8,7 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeCarsoulComponent } from './home-carsoul/home-carsoul.component';
 import { FooterComponent } from './footer/footer.component';
 import { RecipeCardsComponent } from './recipe-cards/recipe-cards.component';
-import { RecipeCardItemComponent } from './recipe-cards/recipe-card-item/recipe-card-item.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { RecipeCardItemComponent } from './recipe-cards/recipe-card-item/recipe-
     HomeCarsoulComponent,
     FooterComponent,
     RecipeCardsComponent,
-    RecipeCardItemComponent,
+    AddPostComponent,
     // RecipesComponent,
   ],
   imports: [
