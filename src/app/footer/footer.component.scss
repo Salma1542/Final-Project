@@ -1,6 +1,6 @@
 // footer{
 //     min-height:320px;
-    
+
 // }
 // .logo{
 //     margin-top: 50px;
@@ -8,31 +8,39 @@
 footer {
     font-family: 'Arial', sans-serif;
   }
-  
+
   footer h5 {
     margin-bottom: 15px;
     font-weight: bold;
   }
-  
+
   footer a:hover {
     text-decoration: underline;
   }
-  
+
   footer .input-group .form-control {
     border-radius: 0;
   }
-  
+
   footer .input-group .btn {
     border-radius: 0;
     background-color: orange;
     color: white;
   }
-  
+
   footer .input-group .btn:hover {
-    background-color: orange;
+    background-color: rgb(223, 147, 5);
+    transform: scale(1.02);
+    transition: all .2s ease-in;
   }
-  
+  button{
+    border: none;
+  }
+  input:focus,
+  input:focus-visible{
+    box-shadow: none;
+    border: none;
+  }
   footer .border-top {
     border-color: #444 !important;
   }
-  

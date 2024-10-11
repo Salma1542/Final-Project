@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RecipeCardsComponent } from './recipe-cards/recipe-cards.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { FormsModule } from '@angular/forms';
+import { RecipesComponent } from './recipes/recipes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     RecipeCardsComponent,
     AddPostComponent,
+    RecipesComponent,
   ],
   imports: [
     BrowserModule,
