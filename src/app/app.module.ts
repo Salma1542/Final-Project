@@ -9,6 +9,7 @@ import { HomeCarsoulComponent } from './home-carsoul/home-carsoul.component';
 import { FooterComponent } from './footer/footer.component';
 import { RecipeCardsComponent } from './recipe-cards/recipe-cards.component';
 import { RecipeCardItemComponent } from './recipe-cards/recipe-card-item/recipe-card-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RecipeCardItemComponent } from './recipe-cards/recipe-card-item/recipe-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()
