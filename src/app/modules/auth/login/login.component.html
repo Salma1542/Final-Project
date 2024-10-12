@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="col-lg-7 col-md-6 col-sm-1 left">
+    <div class="content-img ">
+      <img src="assets/images/orange.webp" alt="" />
+    </div>
+  </div>
+  <div class="col-lg-5 col-md-6 col-sm-11">
+    <div
+      class="content-inputs d-flex align-items-center h-100 justify-content-center"
+    >
+      <form #loginform="ngForm" (ngSubmit)="login(loginform)">
+        <h2 class="mb-5">
+          L<img src="assets/images/orange.png" alt="" />gin Form
+        </h2>
+
+        <div class="mb-3">
+          <label for="exampleInputUsername" class="form-label mb-2"
+            >Username</label
+          >
+          <input
+            type="text"
+            class="form-control mb-4"
+            id="exampleInputUsername"
+            name="username"
+            required
+            #username="ngModel"
+            ngModel
+            [class.is-invalid]="username.invalid&&username.touched&&username.errors"
+            (input)="onInputChange()"
+
+          />
+          <ng-container *ngIf="username.invalid&&username.touched&&username.errors">
+          <small class="text-danger" *ngIf="username.errors['required']" >please enter username</small>
+        </ng-container>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label mb-2"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="form-control mb-4"
+            id="exampleInputPassword1"
+            name="password"
+
+            #password="ngModel"
+            ngModel
+            required
+            [class.is-invalid]="password.invalid&&password.touched&&password.errors"
+            (input)="onInputChange()"
+
+          />
+          <ng-container *ngIf="password.invalid&&password.touched&&password.errors">
+            <small class="text-danger" *ngIf="password.errors['required']" >please enter password</small>
+          </ng-container>
+
+
+          <small class="text-danger" *ngIf="formSubmitted==true&&check==false&&username.dirty&&password.dirty">username or password may be wrong</small>
+
+        </div>
+
+        <div class="register-now d-flex  mb-5">
+          <a class="text-decoration-none me-3 mb-2" routerLink="/auth/forgetPassword">forget password?</a>
+          <a
+            routerLink='/auth/registration'
+            id="register"
+            class="text-decoration-none ms-1"
+            >register now
+          </a>
+        </div>
+
+        <button type="submit" class="btn mb-5" [routerLink]="ifPassed">
+          Login
+          <img
+            src="assets/images/carrot-cake.png"
+            width="20px"
+            height="20px"
+            alt=""
+            class="ms-2"
+          />
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -11,6 +11,7 @@ import { RecipeCardsComponent } from './recipe-cards/recipe-cards.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { FormsModule } from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
+import { AboutComponent } from './about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { RecipesComponent } from './recipes/recipes.component';
     RecipeCardsComponent,
     AddPostComponent,
     RecipesComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
