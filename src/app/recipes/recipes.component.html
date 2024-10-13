@@ -1,4 +1,5 @@
 <nav class="Reciepe pt-4 ">
+<section class="Reciepe pt-4">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
       <div class="d-flex align-items-center justify-content-center">
@@ -6,43 +7,115 @@
         <img src="../../assets/images/cookbook.gif" alt="" width="50px">
       </div>
       <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Add Reciepe
-  </button>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Recipe</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="">
-            <label for="title" class="mb-1">Title</label><br>
-            <input type="text" class="form-control"  placeholder="Enter Recip Title" name="title" required  [(ngModel)]="title">
-            <label for="course" class="mb-1 mt-2">category</label><br>
-            <input type="text" class="form-control" placeholder="Enter Recip category" name="cou rse" [(ngModel)]="course">
-            <label for="cookTime" class="mb-1 mt-2">Cook Time</label><br>
-            <input type="number" class="form-control" placeholder="Enter Recip cookTime per minute s" name="cookTime" [(ngModel)]="cookTime">
-            <label for="ingredients" class="mb-1 mt-2">Ingredients</label><br>
-            <textarea name="ingredients" placeholder="Enter Recip ingredients" class= "form-control" [(ngModel)]="ingredients"></textarea>
-            <label for="directions" class="mb-1 mt-2">Directions</label><br>
-            <textarea type="text" class="form-control" placeholder="Enter Recip directions" name="d irections" [(ngModel)]="directions"></textarea>
-            <label for="photoUrl" class="mb-1 mt-2">Recipe Photo</label><br>
-            <input type="text" class="form-control" placeholder="Enter Recip photoUrl" name="pho toUrl" [(ngModel)]="photoUrl">
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary " data-bs-dismiss="modal" (click)="pushRecipe()">ADD</button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Add Reciepe
+      </button>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Add Recipe
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="">
+                <label for="title" class="mb-1">Title</label><br />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Recip Title"
+                  name="title"
+                  required
+                  [(ngModel)]="title"
+                />
+                <label for="course" class="mb-1 mt-2">category</label><br />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Recip category"
+                  name="cou rse"
+                  [(ngModel)]="course"
+                />
+                <label for="cookTime" class="mb-1 mt-2">Cook Time</label><br />
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Enter Recip cookTime per minute s"
+                  name="cookTime"
+                  [(ngModel)]="cookTime"
+                />
+                <label for="ingredients" class="mb-1 mt-2">Ingredients</label
+                ><br />
+                <textarea
+                  name="ingredients"
+                  placeholder="Enter Recip ingredients"
+                  class="form-control"
+                  [(ngModel)]="ingredients"
+                ></textarea>
+                <label for="directions" class="mb-1 mt-2">Directions</label
+                ><br />
+                <textarea
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Recip directions"
+                  name="d irections"
+                  [(ngModel)]="directions"
+                ></textarea>
+                <label for="photoUrl" class="mb-1 mt-2">Recipe Photo</label
+                ><br />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Recip photoUrl"
+                  name="pho toUrl"
+                  [(ngModel)]="photoUrl"
+                />
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+                (click)="pushRecipe()"
+              >
+                ADD
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-    </div>
-  </div>
+</section>
 </nav>
+
 <section class="container">
   <div class=" d-flex flex-wrap align-items-center gap-4 justify-content-center  ">
     <ng-container *ngFor="let recip of recipes |paginate:{itemsPerPage: itemsPerPage,currentPage: p}">
@@ -52,10 +125,36 @@
           <div class="p-3 justify-content-around  ">
             <h5 class="card-title">{{recip.title}}</h5>
             <p>{{recip.course}}</p>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>
+<section class="container">
+  <div
+    class="d-flex flex-wrap align-items-center gap-4 justify-content-center mt-4"
+  >
+    <ng-container *ngFor="let recip of recipes">
+      <div class="  ">
+        <div class="card h-100">
+          <a [routerLink]="['/details']" (click)="addDetails(this.recip)" class="text-decoration-none">
+            <img [src]="recip.photoUrl" class="card-img-top w-100" height="250"
+          /></a>
+          <div class="p-3 justify-content-around">
+            <h5 class="card-title">{{ recip.title }}</h5>
+            <p>{{ recip.course }}</p>
             <div class="d-flex justify-content-between">
-              <span class="badge rounded-pill text-bg-warning align-items-center">{{recip.cookTime}}minutes</span>
+              <span
+                class="badge rounded-pill text-bg-warning align-items-center"
+                >{{ recip.cookTime }}minutes</span
+              >
               <div class="icon-circle">
-                <i class="fa fa-bookmark-o" aria-hidden="true" style="color:orange"></i>
+                <i
+                  class="fa fa-bookmark-o"
+                  aria-hidden="true"
+                  style="color: orange"
+                ></i>
               </div>
             </div>
           </div>

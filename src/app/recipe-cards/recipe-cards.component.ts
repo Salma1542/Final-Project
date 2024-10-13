@@ -8,10 +8,12 @@ import { DataService } from '../services/data.service';
   styleUrl: './recipe-cards.component.scss'
 })
 export class RecipeCardsComponent implements OnInit {
-  recipe:IRecipe[]=[]
+  recipe: IRecipe[] = [];
+
   ngOnInit(): void {
-    let recipes=new DataService()
-    this.recipe=recipes.getRecipe()
+    let recipes = new DataService();
+    this.recipe = recipes.getRecipe();
   }
+
 
 }

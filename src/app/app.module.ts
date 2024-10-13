@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { AboutComponent } from './about/about.component';
 import { CategoriesComponent } from './recipes/categories/categories.component';
+import { DetailsComponent } from './details/details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { CategoriesComponent } from './recipes/categories/categories.component';
     RecipesComponent,
     AboutComponent,
     CategoriesComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
