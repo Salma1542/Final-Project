@@ -1,9 +1,8 @@
 <div class="details w-100">
   <div class="container">
-    <!-- <div class="d-flex justify-content-center align-items-center"> -->
-    <div class="row mt-4">
+    <div class="row mt-4 gy-4 d-flex justify-content-center align-items-center">
       <div class="col-lg-6 col-md-12 col-sm-12">
-        <div class="image rounded overflow-hidden mt-5">
+        <div class="image rounded overflow-hidden ">
           <img class="img-fluid h-100 w-100" [src]="photoUrl" alt="" />
         </div>
       </div>
@@ -24,6 +23,12 @@
           <p class="lh-lg">{{ directions }}</p>
         </div>
       </div>
+    </div>
+    <div class="back-button">
+      <button class="btn btn-primary d-flex align-items-center gap-2 justify-content-center" routerLink="/recipes" >
+        <img src="../../assets/images/fast-backward.gif" width="35px" alt="">
+        Back
+      </button>
     </div>
   </div>
 </div>

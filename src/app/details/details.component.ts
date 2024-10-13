@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -14,15 +15,15 @@ dishDetails:any;
 ingredientsDetails: string='';
 ngOnInit(): void {
   this.dishDetails= JSON.parse(localStorage.getItem('dishDetails')!);
-console.log(this.dishDetails);
-this.photoUrl=this.dishDetails.photoUrl;
-this.ingredients=this.dishDetails.ingredients.split('\n');
-this.directions=this.dishDetails.directions;
+  console.log(this.dishDetails);
+  this.photoUrl=this.dishDetails.photoUrl;
+  this.ingredients=this.dishDetails.ingredients.split('\n');
+  this.directions=this.dishDetails.directions;
 
-for (let index = 0; index < this.ingredients.length; index++) {
+  for (let index = 0; index < this.ingredients.length; index++) {
 
-this.ingredientsDetails+= this.ingredients[index]+ '<br>';
+  this.ingredientsDetails+= this.ingredients[index]+ '<br>';
+  }
 }
 
-}
 }

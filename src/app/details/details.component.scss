@@ -27,3 +27,20 @@ overflow: auto;
   width: 20%;
 }
 }
+.btn-primary{
+  background-color: white ;
+  color: orange;
+  border: none;
+}
+.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active {
+  color: orange;
+  background-color: #922449;
+  border: none;
+}
+img{
+  background: transparent;
+}
+.btn:focus-visible {
+  outline: 0;
+  box-shadow: none;
+}
