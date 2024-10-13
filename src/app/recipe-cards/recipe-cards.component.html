@@ -1,25 +1,28 @@
 <div class="container">
-  <div class="align-text-center mb-6 ">
-    <h1 class="home-title"> This Summer Recipes</h1>
-    <p class="home-p "> we have all your Independence Day sweets covered</p>
+  <div class="align-text-center mb-6">
+    <h1 class="home-title">This Summer Recipes</h1>
+    <p class="home-p">We have all your Independence Day sweets covered</p>
   </div>
   <div class="row d-flex gy-4 pb-4 flex-wrap align-items-center justify-content-center">
-      <ng-container *ngFor="let item of recipe.slice(0, 8)">
-          <div class="col-lg-3 col-md-6 " >
-              <div class="card    h-100"  >
-                <img [src]="item.photoUrl" class="card-img-top w-100" height="250" >
-                <div class="p-3 justify-content-around  ">
-                  <h5 class="card-title">{{item.title}}</h5>
-                  <p>{{item.course}}</p>
-                  <div class="d-flex justify-content-between">
-                    <span class="badge rounded-pill text-bg-warning align-items-center">{{item.cookTime}}minutes</span>
-                    <div class="icon-circle">
-                      <i class="fa fa-bookmark-o" aria-hidden="true" style="color:orange"></i>
-                    </div>
-                  </div>
+    <ng-container *ngFor="let item of recipe.slice(0, 8)">
+      <div class="col-lg-3 col-md-6">
+        <!-- Add (click)="lo()" to the <a> tag or the <div> around the card -->
+          <div class="card h-100">
+            <img [src]="item.photoUrl" class="card-img-top w-100" height="250"/>
+            <div class="p-3 justify-content-around">
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p>{{ item.course }}</p>
+              <div class="d-flex justify-content-between">
+                <span class="badge rounded-pill text-bg-warning align-items-center">
+                  {{ item.cookTime }} minutes
+                </span>
+                <div class="icon-circle">
+                  <i class="fa fa-bookmark-o" aria-hidden="true" style="color: orange"></i>
                 </div>
               </div>
             </div>
-        </ng-container>
+          </div>
+      </div>
+    </ng-container>
+  </div>
 </div>
-

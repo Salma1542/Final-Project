@@ -12,6 +12,7 @@ import { AddPostComponent } from './add-post/add-post.component';
 import { FormsModule } from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { AboutComponent } from './about/about.component';
+import { DetailsComponent } from './details/details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { AboutComponent } from './about/about.component';
     AddPostComponent,
     RecipesComponent,
     AboutComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

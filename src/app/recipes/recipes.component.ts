@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { IRecipe } from '../interfaces/recipes';
+import { log } from 'console';
 
 @Component({
   selector: 'app-recipes',
@@ -63,5 +64,18 @@ export class RecipesComponent implements OnInit {
     this.ingredients = '';
     this.directions = ' ';
     this.photoUrl = ' ';
+  }
+  dishDetails:any={};
+  addDetails(el:IRecipe){
+    this.dishDetails={
+      title: el.title,
+      cooktime: el.cookTime,
+      ingredients: el.ingredients,
+      directions:el.directions,
+      photoUrl:el.photoUrl,
+    }
+    localStorage.setItem('dishDetails',JSON.stringify(this.dishDetails));
+
+
   }
 }
