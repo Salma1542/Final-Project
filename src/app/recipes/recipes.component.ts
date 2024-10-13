@@ -9,16 +9,22 @@ import { IRecipe } from '../interfaces/recipes';
 })
 export class RecipesComponent implements OnInit {
   recipes:IRecipe[]=[];
+  p:number = 1;
+  itemsPerPage:number = 8;
+  totalRecipe:any;
   title:string = '';
   course:string = '';
   cookTime:number = 0;
   ingredients:string = '';
   directions:string = '';
   photoUrl:string = '';
-
+  showFirst(){
+    return this.recipes.slice(0,14);
+  }
   ngOnInit(): void {
     let dataService= new DataService;
     this.recipes = dataService.getRecipe();
+    this.totalRecipe = this.recipes.length;
   }
 
   pushRecipe(){
@@ -64,4 +70,5 @@ export class RecipesComponent implements OnInit {
     this.directions = ' ';
     this.photoUrl = ' ';
   }
+
 }

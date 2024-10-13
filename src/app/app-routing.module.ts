@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeCarsoulComponent } from './home-carsoul/home-carsoul.component';
 import { AboutComponent } from './about/about.component';
 import { RecipesComponent } from './recipes/recipes.component';
+import { CategoriesComponent } from './recipes/categories/categories.component';
 
 const routes: Routes = [
-  {path:'', redirectTo:'recipes', pathMatch:'full'},
-  {path: 'recipes', component:RecipesComponent},
+  {path:'', redirectTo:'what to cook', pathMatch: 'full'},
   {path: 'what to cook' , component: HomeCarsoulComponent},
+  {path: 'recipes', component:RecipesComponent},
   {path: 'about', component:AboutComponent},
+  {path: 'categories', component:CategoriesComponent},
   { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
 
 ];

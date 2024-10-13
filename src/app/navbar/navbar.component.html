@@ -11,14 +11,11 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <img
-        src="./assets/images/hat-chef-logo.jpg"
-        alt=""
-        width="90"
-        height="90"
-      />
-      <h2 class="logo-txt me-4">Chefify</h2>
+    <div class="collapse navbar-collapse d-flex align-items-center justify-content-center " id="navbarNavDropdown">
+      <div class="d-flex align-items-center justify-content-center gap-2">
+        <img src="../../assets/images/chef-hat_17637543.png"alt=""  width="60px" height="60px"/>
+        <h2 class="logo-txt me-4 mt-2">Chefify</h2>
+      </div>
       <input
         class="form-control me-2 search-box"
         type="search"
@@ -27,27 +24,19 @@
       />
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            style="color: orange"
-            aria-current="page"
-            href="#"
-            >What to cook</a
-          >
+          <a class="nav-link " routerLinkActive="active"aria-current="page"routerLink="/what to cook">What to cook</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Recipes</a>
+          <a class="nav-link " routerLinkActive="active" aria-current="page" routerLink="/recipes">Recipes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"
-            >Ingredients</a
-          >
+          <a class="nav-link " routerLinkActive="active" aria-current="page" routerLink="/categories">Categories</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Occasions</a>
+          <a class="nav-link " routerLinkActive="active" aria-current="page" routerLink="/occasions">Occasions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/about">About Us</a>
+          <a class="nav-link " routerLinkActive="active" aria-current="page" routerLink="/about">About Us</a>
         </li>
       </ul>
       <form class="d-flex align-items-center" role="search">

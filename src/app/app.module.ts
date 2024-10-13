@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -12,6 +12,7 @@ import { AddPostComponent } from './add-post/add-post.component';
 import { FormsModule } from '@angular/forms';
 import { RecipesComponent } from './recipes/recipes.component';
 import { AboutComponent } from './about/about.component';
+import { CategoriesComponent } from './recipes/categories/categories.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,12 +23,15 @@ import { AboutComponent } from './about/about.component';
     AddPostComponent,
     RecipesComponent,
     AboutComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
+
   ],
   providers: [
     provideClientHydration()

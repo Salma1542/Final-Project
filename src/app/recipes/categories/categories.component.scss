@@ -1,0 +1,15 @@
+section{
+  min-height: calc(100vh - 450px);
+}
+.cat-logo{
+  height: 280px;
+  background-image: url(../../../assets/images/categories.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+  background-color: rgba(149, 45, 79, 0.655);
+  width: 250px;
+  height: 100px;
+  color: orange;
+}

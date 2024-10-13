@@ -1,5 +1,4 @@
-
-h1{
+h2{
   color: orange;
 }
 .btn-primary{
@@ -50,3 +49,20 @@ box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
 input:focus{
   box-shadow: none;
 }
+.page-link{
+  color: orange;
+  box-shadow: none;
+  cursor: pointer;
+}
+::ng-deep{
+  .ngx-pagination  .current {
+    padding: .1875rem .625rem;
+    background-color: orange !important;
+    color: #fefefe;
+    cursor: default;
+}
+  .ngx-pagination li {
+    border-radius: 2px;
+  }
+}
+

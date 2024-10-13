@@ -1,5 +1,5 @@
- .main-nav  {
-    background-color:white !important;
+.main-nav  {
+    background-color:rgb(146, 36, 73) !important;
     border-bottom: 1px solid gray;
     padding: 15px;
 }
@@ -18,7 +18,7 @@ color: gray;
 }
 
 .second-main{
-    background-color:white !important;
+    background-color:rgb(146, 36, 73) !important;
 }
 .login-btn{
     text-decoration: none;
@@ -75,4 +75,10 @@ color: gray;
   left: 0;
   top: 0;
   z-index: 999;
+  }
+  .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: orange;
+}
+form .btn {
+   padding: 8px;
   }

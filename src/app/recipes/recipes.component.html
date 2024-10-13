@@ -1,7 +1,10 @@
-<section class="Reciepe pt-4 ">
+<nav class="Reciepe pt-4 ">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
-      <h1>All Reciepes</h1>
+      <div class="d-flex align-items-center justify-content-center">
+        <h2>All Reciepes</h2>
+        <img src="../../assets/images/cookbook.gif" alt="" width="50px">
+      </div>
       <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Add Reciepe
@@ -39,10 +42,10 @@
   </div>
     </div>
   </div>
-</section>
+</nav>
 <section class="container">
-  <div class=" d-flex flex-wrap align-items-center gap-4 justify-content-center mt-4 ">
-    <ng-container *ngFor="let recip of recipes">
+  <div class=" d-flex flex-wrap align-items-center gap-4 justify-content-center  ">
+    <ng-container *ngFor="let recip of recipes |paginate:{itemsPerPage: itemsPerPage,currentPage: p}">
       <div class="  " >
         <div class="card    h-100"  >
           <img [src]="recip.photoUrl" class="card-img-top w-100" height="250" >
@@ -58,7 +61,9 @@
           </div>
         </div>
       </div>
-
     </ng-container>
+  </div>
+  <div class="d-flex justify-content-center mt-4">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </div>
 </section>
