@@ -19,9 +19,7 @@ export class RecipesComponent implements OnInit {
   ingredients:string = '';
   directions:string = '';
   photoUrl:string = '';
-  showFirst(){
-    return this.recipes.slice(0,14);
-  }
+
   ngOnInit(): void {
     let dataService= new DataService;
     this.recipes = dataService.getRecipe();

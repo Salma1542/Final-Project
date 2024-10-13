@@ -3,7 +3,7 @@ export interface IRecipe {
   title?: string | null,
   course?: string | null,
   cuisine?: string | null,
-  mainIngredient?: string | null,
+  mainIngredient?: string | null |undefined,
   description?: string  | null,
   source?: string | null,
   url?: string | null,
