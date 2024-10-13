@@ -82,3 +82,21 @@ color: gray;
 form .btn {
    padding: 8px;
   }
+  .search{
+    border: none;
+  }
+  .search input{
+    position: relative;
+  }
+  .search ul{
+    position: absolute;
+    width: 250px;
+  }
+  .search li{
+    cursor: pointer;
+  }
+  .search li:active{
+    background-color: #FF535B;
+    color: orange;
+    border: none;
+  }

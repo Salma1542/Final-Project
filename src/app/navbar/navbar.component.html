@@ -16,12 +16,16 @@
         <img src="../../assets/images/chef-hat_17637543.png"alt=""  width="60px" height="60px"/>
         <h2 class="logo-txt me-4 mt-2">Chefify</h2>
       </div>
-      <input
-        class="form-control me-2 search-box"
-        type="search"
-        placeholder="What Would You like to cook?"
-        aria-label="Search"
-      />
+      <div class="search">
+        <input class="form-control me-2 search-box"type="search"placeholder="What Would You like to cook?" aria-label="Search" [(ngModel)]="filterName">
+        <ng-container *ngIf="filterName.length>0">
+          <ul class="list-group " >
+            <li  class="list-group-item" *ngFor="let c of recipes | search: filterName" >
+              {{c.title}}
+            </li>
+          </ul>
+        </ng-container>
+      </div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link " routerLinkActive="active"aria-current="page"routerLink="/what to cook">What to cook</a>

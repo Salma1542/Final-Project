@@ -14,6 +14,7 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { AboutComponent } from './about/about.component';
 import { CategoriesComponent } from './recipes/categories/categories.component';
 import { DetailsComponent } from './details/details.component';
+import { SearchPipe } from './pipe/search.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { DetailsComponent } from './details/details.component';
     AboutComponent,
     CategoriesComponent,
     DetailsComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
