@@ -8,17 +8,19 @@
       </div>
       <!-- Button trigger modal -->
       <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Add Reciepe
-      </button>
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+  (click)="abilityToLogin()"
+>
+  Add Recipe
+</button>
+
       <!-- Modal -->
       <div
         class="modal fade"
-        id="exampleModal"
+        [id]="modal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"

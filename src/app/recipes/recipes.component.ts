@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { IRecipe } from '../interfaces/recipes';
-import { log } from 'console';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipes',
@@ -19,6 +20,7 @@ export class RecipesComponent implements OnInit {
   ingredients:string = '';
   directions:string = '';
   photoUrl:string = '';
+   modal: string= "exampleModal1";
 
   ngOnInit(): void {
     let dataService= new DataService;
@@ -82,5 +84,23 @@ export class RecipesComponent implements OnInit {
     localStorage.setItem('dishDetails',JSON.stringify(this.dishDetails));
 
 
+  }
+
+
+  constructor(private authService: AuthService) {}
+
+  abilityToLogin() {
+    if (this.authService.isAuthenticated(JSON.parse(localStorage.getItem('regData')!).length) ) {
+      this.modal="exampleModal";
+      return true;
+
+    }
+     if(this.authService.len==0) {
+      return false;
+    }
+    else{
+      alert('You must login first');
+      return false;
+    }
   }
 }
