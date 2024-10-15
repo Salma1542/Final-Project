@@ -8,7 +8,7 @@ import { EventEmitter } from 'stream';
   templateUrl: './category-items.component.html',
   styleUrl: './category-items.component.scss'
 })
-export class CategoryItemsComponent implements OnInit ,DoCheck{
+export class CategoryItemsComponent implements OnInit {
 
   recipes!:IRecipe[];
   category:IRecipe[]=[];
@@ -96,13 +96,6 @@ export class CategoryItemsComponent implements OnInit ,DoCheck{
   };
 
 
-  details!:IRecipe[]
-  ngDoCheck(): void {
-    let detailsService =new DataService;
-    this.details = detailsService.getRecipe();
-  }
-sendData(){
-  this.ngDoCheck
-}
+
 
 }
