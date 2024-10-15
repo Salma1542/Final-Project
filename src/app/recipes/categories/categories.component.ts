@@ -12,6 +12,5 @@ export class CategoriesComponent implements OnInit {
   ngOnInit(): void {
     let recipeService = new DataService;
     this.recipe = recipeService.getRecipe();
-
   }
 }

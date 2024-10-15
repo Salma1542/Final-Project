@@ -3,6 +3,7 @@ import { IRecipe } from '../../../interfaces/recipes';
 import { ICategory } from '../../../interfaces/category';
 import { DataService } from '../../../services/data.service';
 import { EventEmitter } from 'stream';
+import { map } from 'rxjs';
 @Component({
   selector: 'app-category-items',
   templateUrl: './category-items.component.html',
@@ -95,7 +96,10 @@ export class CategoryItemsComponent implements OnInit {
     });
   };
 
-
-
+  constructor(private _dataService:DataService
+  ){ }
+sendDet(el:IRecipe):void{
+    this._dataService.categoryDetails;
+}
 
 }

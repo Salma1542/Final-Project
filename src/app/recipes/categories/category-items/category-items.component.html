@@ -8,7 +8,7 @@
         <ng-container *ngFor="let recipe of getUniqueRecipes(['Poultry', 'Chocolate' ,'Eggs']); let i = index">
           <div class="card d-flex align-items-center justify-content-center" >
             <!-- عرض صورة خاصة لكل عنصر في uniqueRecipes -->
-            <a>
+            <a (click)="sendDet(this.recipe)">
               <img [src]="categories[i].images" class="w-100" height="200px" alt="Image of {{recipe.mainIngredient}}">
             </a>
             <h4 class="px-2">{{recipe.mainIngredient}}</h4>
