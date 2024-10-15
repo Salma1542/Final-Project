@@ -17,6 +17,7 @@ import { DetailsComponent } from './details/details.component';
 import { SearchPipe } from './pipe/search.pipe';
 import { SavesComponent } from './saves/saves.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { CategoryItemsComponent } from './recipes/categories/category-items/category-items.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     CategoriesComponent,
     DetailsComponent,
     SearchPipe,
+    CategoryItemsComponent,
   ],
   imports: [
     BrowserModule,
