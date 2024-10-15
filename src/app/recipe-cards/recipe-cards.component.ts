@@ -23,6 +23,19 @@ export class RecipeCardsComponent implements OnInit {
 
     alert(`${recipe.title} has been added to your saved recipes!`);
   }
+  dishDetails:any={};
+  addDetails(el:IRecipe){
+    this.dishDetails={
+      title: el.title,
+      cooktime: el.cookTime,
+      ingredients: el.ingredients,
+      directions:el.directions,
+      photoUrl:el.photoUrl,
+    }
+    localStorage.setItem('dishDetails',JSON.stringify(this.dishDetails));
+
+
+  }
 
 
 }

@@ -2,15 +2,15 @@
     <div class="align-text-center mb-6">
       <h1 class="home-title">Top Recipes</h1>
     </div>
-  
-    <ngx-slick-carousel class="carousel " #slickModal="slick-carousel" [config]="slideConfig">
-      <div ngxSlickItem *ngFor="let item of recipe.slice(0, 20)" class="slide position-relative">
-        <img [src]="item.photoUrl" class="card-img" height="300">
-        <div class="recipe-name position-absolute">
-         <h3>{{item.title}}</h3>
-        </div>
 
-      </div>
+    <ngx-slick-carousel class="carousel " #slickModal="slick-carousel" [config]="slideConfig">
+      <ng-container ngxSlickItem *ngFor="let item of recipe.slice(0, 20)">
+          <div  class="slide position-relative">
+            <img [src]="item.photoUrl" class="card-img" height="300">
+            <div class="recipe-name position-absolute" >
+              <h3 >{{item.title}}</h3>
+            </div>
+          </div>
+      </ng-container>
     </ngx-slick-carousel>
   </div>
-  

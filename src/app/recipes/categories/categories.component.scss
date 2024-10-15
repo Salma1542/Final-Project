@@ -9,15 +9,16 @@ section{
 }
 
 h1{
-  background-color: #952d4fa7;
+  background-color: rgba(255, 166, 0, 0.533);
   width: 250px;
   height: 100px;
-  color: orange;
+  color: rgb(235, 229, 229);
 }
 .card{
-  width: 300px;
+  width: 200px;
+  height: 100px;
   cursor: pointer;
-  border: 1px solid rgba(149, 45, 79, 0.655);
+  border: 1px solid #ffffffa7;
   overflow: hidden;
   transition: all 3s 1s ease-in;
   img{
@@ -26,15 +27,15 @@ h1{
   h4{
     position: absolute;
     bottom: 0;
-    color: orange;
-    background-color: #952d4fa7;
+    color: rgb(235, 229, 229);
+    background-color: rgba(255, 166, 0, 0.436);
   }
 }
 .card:hover img{
   transform: scale(1.3);
 }
 .card:hover h4{
-  background-color: #952d50d3;
+  background-color: rgba(255, 166, 0, 0.859);
 }
 
 a{

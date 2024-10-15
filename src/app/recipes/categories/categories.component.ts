@@ -17,7 +17,28 @@ export class CategoriesComponent implements OnInit {
     let  recipeService =new DataService;
     this.recipes = recipeService.getRecipe();
   }
+
   categories:ICategory[] = [
+    {
+      "category" : "Vegetables",
+      "images": "../../../assets/images/vegetables.jpg"
+    },
+    {
+      "category" : "Chicken",
+      "images": "../../../assets/images/chicken.jpg"
+    },
+    {
+      "category" : "Rice & Grains ",
+      "images": "../../../assets/images/rice.avif"
+    },
+    {
+      "category" : "Fruits ",
+      "images": "../../../assets/images/fruit.jpg"
+    },
+    {
+      "category" : "Fish",
+      "images": "../../../assets/images/fish.jpg"
+    },
     {
       "category" : "Breakfast ",
       "images": "../../../assets/images/breakfast.jpg"
@@ -38,27 +59,41 @@ export class CategoriesComponent implements OnInit {
       "category" : "Soup",
       "images": "../../../assets/images/soup.jpg"
     },
-    {
-      "category" : "Vegetables",
-      "images": "../../../assets/images/vegetables.jpg"
-    },
-    {
-      "category" : "Chicken",
-      "images": "../../../assets/images/chicken.jpg"
-    },
-    {
-      "category" : "Fish",
-      "images": "../../../assets/images/fish.jpg"
-    },
-    {
-      "category" : "Rice & Grains ",
-      "images": "../../../assets/images/rice.avif"
-    },
-    {
-      "category" : "Fruits ",
-      "images": "../../../assets/images/fruit.jpg"
-    },
+
+
   ]
 
+  // dishDetails:any={};
+  // addDetails(el:IRecipe){
+  //   this.dishDetails={
+  //     title: el.title,
+  //     cooktime: el.cookTime,
+  //     ingredients: el.ingredients,
+  //     directions:el.directions,
+  //     photoUrl:el.photoUrl,
+  //   }
+  //   localStorage.setItem('dishDetails',JSON.stringify(this.dishDetails));
+
+
+  // }
+  getUniqueRecipes(ingredientsToRemove: string[] = []) {
+    const uniqueIngredients = new Set();
+
+    return this.recipes.filter(recipe => {
+      // تحقق مما إذا كانت mainIngredient موجودة وتخطي إذا كانت في ingredientsToRemove
+      const mainIngredient = recipe.mainIngredient?.trim();
+      if (mainIngredient && ingredientsToRemove.includes(mainIngredient)) {
+        return false; // تجاهل الوصفة إذا كانت تساوي أي من العناصر المراد إزالتها
+      }
+
+      // تحقق من أن mainIngredient ليس فارغًا
+      if (mainIngredient && !uniqueIngredients.has(mainIngredient)) {
+        uniqueIngredients.add(mainIngredient);
+        return true; // احتفظ بالوصفة
+      }
+
+      return false; // تجاهل الوصفات الفارغة أو المكررة
+    });
+  };
 
 }
