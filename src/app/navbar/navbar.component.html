@@ -11,37 +11,77 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse d-flex align-items-center justify-content-center " id="navbarNavDropdown">
-      <div class="d-flex align-items-center justify-content-center gap-2">
-        <img src="../../assets/images/chef-hat_17637543.png"alt=""  width="60px" height="60px"/>
-        <h2 class="logo-txt me-4 mt-2">Chefify</h2>
-      </div>
+    <div class="d-flex align-items-center justify-content-center gap-2">
+      <img
+        src="../../assets/images/chef-hat_17637543.png"
+        alt=""
+        width="60px"
+        height="60px"
+      />
+      <h2 class="logo-txt me-4 mt-2">Chefify</h2>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <div class="search">
-        <input class="form-control me-2 search-box"type="search"placeholder="What Would You like to cook?" aria-label="Search" [(ngModel)]="filterName">
-        <ng-container *ngIf="filterName.length>0">
-          <ul class="list-group " >
-            <li  class="list-group-item" *ngFor="let c of recipes | search: filterName" >
-              {{c.title}}
+        <input
+          class="form-control me-2 search-box"
+          type="search"
+          placeholder="What Would You like to cook?"
+          aria-label="Search"
+          [(ngModel)]="filterName"
+        />
+        <ng-container *ngIf="filterName.length > 0">
+          <ul class="list-group">
+            <li
+              class="list-group-item"
+              *ngFor="let c of recipes | search : filterName"
+            >
+              {{ c.title }}
             </li>
           </ul>
         </ng-container>
       </div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link " routerLinkActive="active"aria-current="page"routerLink="/what to cook">What to cook</a>
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            aria-current="page"
+            routerLink="/what to cook"
+            >What to cook</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link " routerLinkActive="active" aria-current="page" routerLink="/recipes">Recipes</a>
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            aria-current="page"
+            routerLink="/recipes"
+            >Recipes</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link " routerLinkActive="active" aria-current="page" routerLink="/categories">Categories</a>
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            aria-current="page"
+            routerLink="/categories"
+            >Categories</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link " routerLinkActive="active" aria-current="page" routerLink="/about">About Us</a>
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            aria-current="page"
+            routerLink="/about"
+            >About Us</a
+          >
         </li>
       </ul>
       <form class="d-flex align-items-center" role="search">
-        <button type="button" class="btn light" routerLink="/auth">Login</button>
+        <button type="button" class="btn light" routerLink="/auth">
+          Login
+        </button>
         <button type="button" class="btn secondary">Subscribe</button>
       </form>
     </div>
