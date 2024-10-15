@@ -1791,7 +1791,10 @@ export class DataService {
       }
 
   ];
-
+  categoryDetails!:IRecipe[]
+  getDetail():IRecipe[]{
+    return this.categoryDetails;
+  }
   getRecipe():IRecipe[]{
     return this.recipes;
   }

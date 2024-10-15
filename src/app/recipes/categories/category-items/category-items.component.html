@@ -3,42 +3,18 @@
     <h1 class="d-flex  justify-content-center align-items-center  ">#Categories</h1>
   </div>
   <div class="container mt-4">
-    <div class="category d-flex">
+    <div class="category">
       <div class="d-flex flex-column justify-content-center align-items-start gap-4 flex-wrap" >
         <ng-container *ngFor="let recipe of getUniqueRecipes(['Poultry', 'Chocolate' ,'Eggs']); let i = index">
-          <div class="card d-flex align-items-center justify-content-center" (click)="sendData()">
+          <div class="card d-flex align-items-center justify-content-center" >
             <!-- عرض صورة خاصة لكل عنصر في uniqueRecipes -->
-            <img [src]="categories[i].images" class="w-100" height="200px" alt="Image of {{recipe.mainIngredient}}">
+            <a (click)="sendDet(this.recipe)">
+              <img [src]="categories[i].images" class="w-100" height="200px" alt="Image of {{recipe.mainIngredient}}">
+            </a>
             <h4 class="px-2">{{recipe.mainIngredient}}</h4>
           </div>
         </ng-container>
       </div>
-      <!-- <div class="details">
-        <ng-container *ngFor="let recip of details">
-          <div class=" card ">
-            <a [routerLink]="['/details']" (click)="addDetails(this.recip)" class="text-decoration-none" class=" h-100">
-                <img [src]="recip.photoUrl" class="card-img-top w-100" height="250"/>
-            </a>
-              <div class="p-3 justify-content-around">
-                <h5 class="card-title">{{ recip.title }}</h5>
-                <p>{{ recip.course }}</p>
-                <div class="d-flex justify-content-between">
-                  <span
-                    class="badge rounded-pill text-bg-warning align-items-center"
-                    >{{ recip.cookTime }}minutes</span
-                  >
-                  <div class="icon-circle">
-                    <i
-                      class="fa fa-bookmark-o"
-                      aria-hidden="true"
-                      style="color: orange"
-                    ></i>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </ng-container>
-      </div> -->
     </div>
   </div>
 </section>

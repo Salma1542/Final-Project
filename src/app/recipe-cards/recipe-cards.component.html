@@ -3,10 +3,10 @@
   <h1 class="home-title"> This Summer Recipes</h1>
 <p class="home-p "> we have all your Independence Day sweets covered</p>
 </div>
-<div class="row  ">
+<div class="row  d-flex justify-content-center align-items-center flex-wrap">
     <ng-container *ngFor="let item of recipe.slice(0, 8)">
         <div class="col-lg-3 col-md-6 mb-4" >
-            <div class="card  d-flex justify-content-between mb-9 h-100 "  >
+            <div class="card  mb-4 h-100 "  >
               <a [routerLink]="['/details']" (click)="addDetails(this.item)" class="text-decoration-none" class=" h-100">
                 <img [src]="item.photoUrl" class="card-img-top w-100" height="250" >
               </a>
@@ -24,7 +24,7 @@
   </div>
   <div class="row d-flex gy-4 pb-4 flex-wrap align-items-center justify-content-center">
     <ng-container *ngFor="let item of recipe.slice(0, 8)">
-      <div class="col-lg-3 col-md-6">
+      <div class="">
         <!-- Add (click)="lo()" to the <a> tag or the <div> around the card -->
           <div class="card h-100">
             <img [src]="item.photoUrl" class="card-img-top w-100" height="250"/>

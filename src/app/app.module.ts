@@ -21,6 +21,7 @@ import { TopChefComponent } from './top-chef/top-chef.component';
 import { ChefDetailsComponent } from './chef-details/chef-details.component';
 import { CategoryItemsComponent } from './recipes/categories/category-items/category-items.component';
 import { SplashComponent } from './splash/splash.component';
+import { RecipeCategoryComponent } from './recipes/categories/recipe-category/recipe-category.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SplashComponent } from './splash/splash.component';
     ChefDetailsComponent,
     CategoryItemsComponent,
     SplashComponent,
+    RecipeCategoryComponent,
   ],
   imports: [
     BrowserModule,
