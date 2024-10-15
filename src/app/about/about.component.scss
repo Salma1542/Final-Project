@@ -1,0 +1,28 @@
+.main{
+  width: 100%;
+  min-height: 60vh;
+}
+.about{
+  background-image: linear-gradient(to top right, rgb(238, 238, 234), orange);
+  min-height: 50px;
+  border-radius: 20px;
+}
+.borderimg{
+  width: 40%;
+  // height: 37%;
+  left: -5%;
+  bottom: 25%;
+}
+
+@media (max-width:1000px) {
+  p{
+    font-size: 15px;
+  }
+
+}
+@media (max-width:1278px) {
+ .borderimg{
+  display: none;
+ }
+
+}

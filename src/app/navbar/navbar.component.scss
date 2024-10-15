@@ -1,5 +1,4 @@
- .main-nav  {
-    background-color:white !important;
+.main-nav  {
     border-bottom: 1px solid gray;
     padding: 15px;
 }
@@ -18,7 +17,6 @@ color: gray;
 }
 
 .second-main{
-    background-color:white !important;
 }
 .login-btn{
     text-decoration: none;
@@ -71,8 +69,32 @@ color: gray;
     color: white;
   }
   nav{
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    top: 0;
+    position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  }
+  .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: orange;
+}
+form .btn {
+   padding: 8px;
+  }
+  .search{
+    border: none;
+  }
+  .search input{
+    position: relative;
+  }
+  .search ul{
+    position: absolute;
+    width: 250px;
+  }
+  .search li{
+    cursor: pointer;
+  }
+  .search li:active{
+    background-color: #FF535B;
+    color: orange;
+    border: none;
   }

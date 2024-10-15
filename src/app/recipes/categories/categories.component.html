@@ -1,0 +1,16 @@
+<section >
+  <div class="cat-logo d-flex  justify-content-center align-items-center">
+    <h1 class="d-flex  justify-content-center align-items-center  ">#Categories</h1>
+  </div>
+  <div class="container mt-4">
+    <div class="d-flex justify-content-center align-items-center  gap-4 flex-wrap">
+      <ng-container *ngFor="let item of categories">
+        <div class="card d-flex align-items-center justify-content-center" >
+          <img [src]="item.images" class="w-100" height="200px" alt="">
+          <h4 class="p-2 mx-2">{{item.category}}</h4>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+

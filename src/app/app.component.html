@@ -5,3 +5,12 @@
 <!-- <app-saves></app-saves> -->
 
 <app-footer></app-footer>
+<ng-container *ngIf="shouldRender">
+  <app-navbar></app-navbar>
+</ng-container>
+
+<router-outlet></router-outlet>
+
+<ng-container *ngIf="shouldRender">
+  <app-footer></app-footer>
+</ng-container>

@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Protest+Strike&display=swap');body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+form .btn{
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  font-size: 20px;
+}
+form .btn:hover{
+  background-color: rgb(239, 156, 1);
+
+  color: white;
+}
+.form-control:focus{
+  border-color: rgb(218, 163, 182);
+
+  box-shadow: 1px 1px 2px rgb(218, 163, 182);
+}
+form input{
+  padding: 6px;
+  border-radius: 7px;
+  box-shadow: 1px 1px 2px rgb(218, 163, 182);
+}
+form label{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(146, 36, 73);
+}
+@media (max-width:575px) {
+  .left, .right{
+    display: none;
+  }
+}

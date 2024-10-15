@@ -24,4 +24,5 @@ export class RecipeCardsComponent implements OnInit {
     alert(`${recipe.title} has been added to your saved recipes!`);
   }
 
+
 }
