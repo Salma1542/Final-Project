@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HomeCarsoulComponent } from './home-carsoul/home-carsoul.component';
 import { SavesComponent } from './saves/saves.component';
+import { ChefDetailsComponent } from './chef-details/chef-details.component';
 
 
 const routes: Routes = [
@@ -17,9 +18,8 @@ const routes: Routes = [
   {path: 'categories', component:CategoriesComponent},
   {path: 'details', component:DetailsComponent},
   { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
-
-  // {path: 'what to cook' , component: HomeCarsoulComponent},
-  { path: 'saves', component: SavesComponent } 
+  { path: 'saves', component: SavesComponent } ,
+  { path: 'chef/:id', component: ChefDetailsComponent },
 
 ];
 

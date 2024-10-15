@@ -17,6 +17,8 @@ import { DetailsComponent } from './details/details.component';
 import { SearchPipe } from './pipe/search.pipe';
 import { SavesComponent } from './saves/saves.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { TopChefComponent } from './top-chef/top-chef.component';
+import { ChefDetailsComponent } from './chef-details/chef-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,8 @@ import { CarouselComponent } from './carousel/carousel.component';
     CategoriesComponent,
     DetailsComponent,
     SearchPipe,
+    TopChefComponent,
+    ChefDetailsComponent,
   ],
   imports: [
     BrowserModule,
