@@ -17,13 +17,11 @@ import { DetailsComponent } from './details/details.component';
 import { SearchPipe } from './pipe/search.pipe';
 import { SavesComponent } from './saves/saves.component';
 import { CarouselComponent } from './carousel/carousel.component';
-<<<<<<< HEAD
 import { TopChefComponent } from './top-chef/top-chef.component';
 import { ChefDetailsComponent } from './chef-details/chef-details.component';
-=======
 import { CategoryItemsComponent } from './recipes/categories/category-items/category-items.component';
+import { SplashComponent } from './splash/splash.component';
 
->>>>>>> 8bc1d010ea1a98816971bc4826aa0beb15956106
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,12 +36,10 @@ import { CategoryItemsComponent } from './recipes/categories/category-items/cate
     CategoriesComponent,
     DetailsComponent,
     SearchPipe,
-<<<<<<< HEAD
     TopChefComponent,
     ChefDetailsComponent,
-=======
     CategoryItemsComponent,
->>>>>>> 8bc1d010ea1a98816971bc4826aa0beb15956106
+    SplashComponent,
   ],
   imports: [
     BrowserModule,

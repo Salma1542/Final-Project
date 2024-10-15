@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ichef } from '../interfaces/chefs';
 import { chefdata } from './chefData';
+import { IRecipe } from '../interfaces/recipes';
 
 @Component({
   selector: 'app-top-chef',
@@ -9,6 +10,8 @@ import { chefdata } from './chefData';
 })
 export class TopChefComponent implements OnInit {
   chef: Ichef[] = [];
+  recipe: IRecipe[] = [];
+
 
   ngOnInit(): void {
     this.chef = chefdata;
