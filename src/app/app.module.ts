@@ -9,6 +9,10 @@ import { HomeCarsoulComponent } from './home-carsoul/home-carsoul.component';
 import { FooterComponent } from './footer/footer.component';
 import { RecipeCardsComponent } from './recipe-cards/recipe-cards.component';
 import { AddPostComponent } from './add-post/add-post.component';
+import { FormsModule } from '@angular/forms';
+import { RecipesComponent } from './recipes/recipes.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { SavesComponent } from './saves/saves.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +22,16 @@ import { AddPostComponent } from './add-post/add-post.component';
     FooterComponent,
     RecipeCardsComponent,
     AddPostComponent,
-    // RecipesComponent,
+    RecipesComponent,
+    SavesComponent,
+    // لا تضع CarouselComponent هنا
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    CarouselComponent // هذا صحيح
   ],
   providers: [
     provideClientHydration()

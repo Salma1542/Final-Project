@@ -1,0 +1,51 @@
+.slick-prew::before, .slick-next::before{
+    color: black !important;
+}
+.card-img{
+    width: 250px;
+}
+.cl{
+    height: 80vh;
+
+}
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    // margin-top: 50px;
+  }
+  
+  .slide {
+    flex: 1;
+    margin: 10px;
+    border-radius: 9px;
+    // border: 1px solid black;
+    overflow: hidden;
+
+  }
+  
+  .card-img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .align-text-center{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .recipe-name{
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 16,.3);
+    color: white;
+    height: 100%;
+    text-align: center;
+    visibility: hidden;
+  }
+  .recipe-name h3{
+    margin-top: 80px;
+  }
+  .slide:hover .recipe-name{
+    visibility: visible;
+  }

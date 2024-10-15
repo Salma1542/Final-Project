@@ -7,7 +7,7 @@
 margin-left: 27px;
 font-size: 18px;
 color: gray;
-} 
+}
 .user-icons i{
     color: black;
     font-size: 26px;
@@ -19,7 +19,6 @@ color: gray;
 
 .second-main{
     background-color:white !important;
-margin-top: 20px;
 }
 .login-btn{
     text-decoration: none;
@@ -53,7 +52,7 @@ margin-top: 20px;
     top: -10px;
     right: -10px;
     color: black;
-    
+
   }
   .logo-txt{
     color:orange;
@@ -70,4 +69,10 @@ margin-top: 20px;
   .secondary{
     background-color: orange;
     color: white;
+  }
+  nav{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
   }

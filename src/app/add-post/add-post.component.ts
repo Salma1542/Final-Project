@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IRecipe } from '../interfaces/recipes';
 
 @Component({
   selector: 'app-add-post',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AddPostComponent {
 
+  
+  
 }
