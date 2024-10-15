@@ -8,10 +8,12 @@ import { NgModule } from '@angular/core';
 import { HomeCarsoulComponent } from './home-carsoul/home-carsoul.component';
 import { SavesComponent } from './saves/saves.component';
 import { ChefDetailsComponent } from './chef-details/chef-details.component';
+import { SplashComponent } from './splash/splash.component';
 
 
 const routes: Routes = [
-  {path:'', redirectTo:'what to cook', pathMatch: 'full'},
+  { path: 'splash', component: SplashComponent },
+  { path: '', redirectTo: '/splash', pathMatch: 'full' }, 
   {path: 'what to cook' , component: HomeCarsoulComponent},
   {path: 'recipes', component:RecipesComponent},
   {path: 'about', component:AboutComponent},
@@ -20,6 +22,7 @@ const routes: Routes = [
   { path: 'auth', loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule) },
   { path: 'saves', component: SavesComponent } ,
   { path: 'chef/:id', component: ChefDetailsComponent },
+  { path: 'category/:name', component: RecipesComponent },
 
 ];
 

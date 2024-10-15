@@ -1,0 +1,15 @@
+.splash-screen {
+    height: 100vh;
+    background-color:orange;
+  }
+  
+  .splash-logo {
+    width: 200px;
+    animation: fadeIn 2s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  

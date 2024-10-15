@@ -4,20 +4,24 @@
     </div>
     <div class="row d-flex justify-content-center align-items-center flex-wrap">
       <ng-container *ngFor="let item of chef">
+        <div class=" col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="card  d-flex justify-content-between mb-9 shadow-sm hover-zoom">
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card h-100 ">
             <div class="chef-container text-center">
-                <div class="chef-image">
-                    <img  [src]="item.photoUrl"  class="card-img-top w-100 rounded-circle" height="250" alt="Chef" >
-                </div>
+              <div class="chef-image">
+                <img [src]="item.photoUrl" class="card-img-top w-100 rounded-circle" height="250" alt="Chef">
+              </div>
             </div>
+
             <div class="p-3 justify-content-between align-items-center">
               <h5 class="card-title">{{item.name}}</h5>
-              <p style="color:orange">{{item.cuisine}}</p>
+              <p style="color: orange">{{item.cuisine}}</p>
               <button type="button" class="btn btn-warning" [routerLink]="['/chef', item.id]">Show Profile</button>
             </div>
           </div>
         </div>
       </ng-container>
     </div>
+    
   </div>

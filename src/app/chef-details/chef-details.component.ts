@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { chefdata } from '../top-chef/chefData';
+import { IRecipe } from '../interfaces/recipes';
 
 @Component({
   selector: 'app-chef-details',
@@ -9,6 +10,7 @@ import { chefdata } from '../top-chef/chefData';
 })
 export class ChefDetailsComponent implements OnInit {
   chef: any;
+  recipe: IRecipe[] = [];
 
   constructor(private route: ActivatedRoute) {}
 

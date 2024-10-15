@@ -1,11 +1,14 @@
 .container{
-    height: 100vh;
+   height: 100vh;
 }
 .card{
     margin-top: 80px;
     border: none;
     text-align: center;
     animation-name:identifier ;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    
 }
 
 .chef-container {
@@ -28,7 +31,11 @@
 }
 @keyframes identifier {
     0%{
-        transform: translate(0);
+        transform: translatey(180px);
+    }
+    100%{
+        transform: translatey(0);
+ 
     }
 }
 
