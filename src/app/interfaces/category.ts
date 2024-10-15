@@ -1,4 +1,4 @@
 export interface ICategory{
   category:string,
-  images:string,
+  images:string |null |undefined,
 }

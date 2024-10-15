@@ -1,19 +1,17 @@
 
 .card{
-  width: 300px !important;
-  min-width: 200px;
-  border: solid 1px #cce7d0;
-  border-radius: 25px;
+  width: 300px ;
+  border: solid 1px #952d5044;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
   margin-block: 20px;
   transition: .2s ease;
   position: relative;
   padding-bottom: 15px;
 }
-
 .card:hover{
-box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 8px 8px 15px rgba(149, 45, 80, 0.267);
 }
 
 .align-text-center{

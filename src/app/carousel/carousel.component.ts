@@ -13,10 +13,11 @@ import { DataService } from '../services/data.service';
 })
 export class CarouselComponent implements OnInit {
   recipe: IRecipe[] = [];
-
+  totalRecipe:any;
   ngOnInit(): void {
     let recipes = new DataService();
     this.recipe = recipes.getRecipe();
+    this.totalRecipe = this.recipe.length;
   }
   slideConfig = {
     slidesToShow: 5, // عرض 5 عناصر في كل مرة
@@ -64,5 +65,18 @@ export class CarouselComponent implements OnInit {
         }
       }
     ]
-  }; 
+  };
+  dishDetails:any={};
+  addDetails(el:IRecipe){
+    this.dishDetails={
+      title: el.title,
+      cooktime: el.cookTime,
+      ingredients: el.ingredients,
+      directions:el.directions,
+      photoUrl:el.photoUrl,
+    },
+    localStorage.setItem('dishDetails',JSON.stringify(this.dishDetails));
+  }
+
+
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IRecipe } from '../interfaces/recipes';
+import { EventEmitter } from 'stream';
 @Injectable({
   providedIn: 'root'
 })
@@ -1790,8 +1791,6 @@ export class DataService {
       }
 
   ];
-
-  constructor() { }
 
   getRecipe():IRecipe[]{
     return this.recipes;

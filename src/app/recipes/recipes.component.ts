@@ -20,7 +20,7 @@ export class RecipesComponent implements OnInit {
   ingredients:string = '';
   directions:string = '';
   photoUrl:string = '';
-   modal: string= "exampleModal1";
+  modal: string= "exampleModal1";
 
   ngOnInit(): void {
     let dataService= new DataService;

@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container saves">
     <div class="align-text-center mb-6">
       <h1 class="home-title">Saved Recipes</h1>
     </div>
-  
+
     <div *ngIf="savedRecipes.length > 0; else noRecipes">
       <table class="table table-bordered table-striped">
         <thead class="table-light">
@@ -23,9 +23,8 @@
         </tbody>
       </table>
     </div>
-  
+
     <ng-template #noRecipes>
       <p>No recipes saved yet!</p>
     </ng-template>
   </div>
-  
