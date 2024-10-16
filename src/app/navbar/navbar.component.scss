@@ -18,13 +18,15 @@ color: gray;
 
 .second-main{
 }
-.login-btn{
+.login{
     text-decoration: none;
     color: black;
     margin-right: 15px;
-    font-weight: 600;
 
     font-size: 16px;
+}
+.login a {
+  color: orange;
 }
 .nav-btn{
     background-color: #FF535B;
@@ -36,10 +38,13 @@ color: gray;
 .nav-item a{
     margin-left: 10px;
     font-size: 17px;
-    font-weight: 600;
+    font-weight: 400;
 }
 .nav-item a:hover{
     color: orange;
+}
+.login a:hover{
+  color: white;
 }
 .fa-shopping-bag{
     position: relative;
@@ -77,9 +82,7 @@ color: gray;
   .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: orange;
 }
-form .btn {
-   padding: 8px;
-  }
+
   .search{
     border: none;
   }

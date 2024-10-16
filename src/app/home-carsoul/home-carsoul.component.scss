@@ -19,11 +19,16 @@ animation: backInUp 2s 1;
 0%{
 
   transform: translateY(400px);
-  
+
 
 }
 100%{
   transform: translateY(0px);
 
+}
+}
+@media (max-width:1000px) {
+h1{
+  font-size: 25px;
 }
 }

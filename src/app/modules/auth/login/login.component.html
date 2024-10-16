@@ -1,17 +1,17 @@
 <div class="row">
-  <div class="col-lg-7 col-md-6 col-sm-1 left">
+  <div class="col-lg-6 col-md-6 col-sm-1 left">
     <div class="content-img ">
       <img src="assets/images/orange.webp" alt="" />
     </div>
   </div>
-  <div class="col-lg-5 col-md-6 col-sm-11">
+  <div class="col-lg-6 col-md-6 col-sm-11">
     <div
       class="content-inputs d-flex align-items-center h-100 justify-content-center"
     >
       <form #loginform="ngForm" (ngSubmit)="login(loginform)">
-        <h2 class="mb-5">
+        <h3 class="mb-5">
           L<img src="assets/images/orange.png" alt="" />gin Form
-        </h2>
+        </h3>
 
         <div class="mb-3">
           <label for="exampleInputUsername" class="form-label mb-2"
@@ -22,6 +22,7 @@
             class="form-control mb-4"
             id="exampleInputUsername"
             name="username"
+            placeholder="Username"
             required
             #username="ngModel"
             ngModel
@@ -42,6 +43,7 @@
             class="form-control mb-4"
             id="exampleInputPassword1"
             name="password"
+            placeholder="Password"
 
             #password="ngModel"
             ngModel

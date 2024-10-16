@@ -18,7 +18,7 @@ h2{
 }
 
 .card{
-  width: 300px ;
+  height: 450px;
   border: solid 1px #952d5044;
   border-radius: 15px;
   overflow: hidden;
@@ -67,4 +67,15 @@ input:focus{
 
 a{
   text-decoration: none;
+}
+.image{
+  height: 270px;
+  overflow: hidden;
+}
+i{
+
+  border: 1px solid orange;
+}
+span{
+padding: 10px 0;
 }

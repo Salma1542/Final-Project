@@ -8,9 +8,9 @@
 form .btn{
   background-color: orange;
   color: white;
-  font-weight: bold;
   width: 100%;
   font-size: 20px;
+  padding: 10px;
 }
 form .btn:hover{
   background-color: rgb(239, 156, 1);
@@ -29,7 +29,6 @@ form input{
 }
 form label{
   font-size: 20px;
-  font-weight: bold;
   color: rgb(146, 36, 73);
 }
 @media (max-width:575px) {
