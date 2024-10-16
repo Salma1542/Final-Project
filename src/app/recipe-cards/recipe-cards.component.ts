@@ -17,6 +17,7 @@ export class RecipeCardsComponent implements OnInit {
     this.recipe = recipes.getRecipe();
   }
   add(recipe: IRecipe): void {
+    this.cartRecipe=localStorage.getItem('cartRecipe')?JSON.parse(localStorage.getItem('cartRecipe')!):[];
     this.cartRecipe.push(recipe);
 
     localStorage.setItem('cartRecipe', JSON.stringify(this.cartRecipe));

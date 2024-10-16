@@ -25,9 +25,11 @@
         <input
           class="form-control me-2 search-box"
           type="search"
-          placeholder="What Would You like to cook?"
+          placeholder="what Would You Like To Cook?"
           aria-label="Search"
-          [(ngModel)]="filterName"
+          (ngModel)="filterName"
+
+
         />
         <ng-container *ngIf="filterName.length > 0">
           <ul class="list-group">

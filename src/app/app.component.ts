@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   ngDoCheck(): void {
-   if(this.router.url.includes('auth')){
+   if(this.router.url.includes('auth')|| this.router.url.includes('splash')){
     this.shouldRender=false;
    }
    else{

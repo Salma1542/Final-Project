@@ -1,18 +1,35 @@
 <div class="container">
-<h1 style="color: orange;">{{ chef.name }}</h1>
-
-<div *ngIf="chef" class="d-flex justify-content-around align-items-center" width="400">
-    
-    <div class="ms-5">
-    <img [src]="chef.photoUrl" alt="{{ chef.name }}" class="rounded-circle" height="180" width="180">
-
+  <div *ngIf="chef">
+    <div class="ok d-flex flex-column-reverse">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div class="mt-5 chef-desc">
-        <p> {{ chef.description }}</p>
-    <p><strong>Cuisine:</strong> {{ chef.cuisine }}</p>
-    <p><strong>Experience:</strong> {{ chef.experience }}</p>
-</div>
+    <div class="row mt-5">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="ms-5">
+          <img
+            [src]="chef.photoUrl"
+            alt="{{ chef.name }}"
+            class="rounded-circle img-fluid"
+            height="280"
+            width="250"
+          />
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-6 col-sm-12">
+        <h1 style="color: orange">{{ chef.name }}</h1>
+        <div class="mt-5 chef-desc">
+          <p>{{ chef.description }}</p>
+          <p class="" style="background-color: orange;"><strong>Cuisine:</strong> {{ chef.cuisine }}</p>
+          <p><strong>Experience:</strong> {{ chef.experience }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="ok ">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
-  
 </div>
-  

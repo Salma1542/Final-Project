@@ -1,9 +1,29 @@
-// <<<<<<< HEAD
-
-// =======
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 .slide{
 margin-top: 25px;
 min-height: calc(100vh - 450px);
 }
-// >>>>>>> c94c80a5c8f1724c289b0b5071ae11bc52ae1b07
+h1{
+  font-family: 'Dancing Script';
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  font-weight: bold;
+}
+.first{
+animation: backInUp 2s 1;
+}
+.second{
+  animation: backInUp 4s  1;
+  }
+@keyframes backInUp {
+0%{
 
+  transform: translateY(400px);
+  
+
+}
+100%{
+  transform: translateY(0px);
+
+}
+}
