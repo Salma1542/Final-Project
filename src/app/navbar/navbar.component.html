@@ -25,23 +25,24 @@
         <input
           class="form-control me-2 search-box"
           type="search"
-          placeholder="what Would You Like To Cook?"
+          placeholder="What Would You Like To Cook?"
           aria-label="Search"
-          (ngModel)="filterName"
-
-
+          [(ngModel)]="filterName"
         />
+
         <ng-container *ngIf="filterName.length > 0">
           <ul class="list-group">
             <li
               class="list-group-item"
               *ngFor="let c of recipes | search : filterName"
+              (click)="openRecipeDetails(c)"
             >
-              {{ c.title }}
+              {{ c.title ?? 'Unnamed Recipe' }}
             </li>
           </ul>
         </ng-container>
       </div>
+
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a

@@ -87,6 +87,7 @@ export class RecipesComponent implements OnInit {
   }
 
 
+
   constructor(private authService: AuthService) {}
 
   abilityToLogin() {
@@ -102,5 +103,14 @@ export class RecipesComponent implements OnInit {
       alert('You must login first');
       return false;
     }
+  }
+  cartRecipe:any[]=[];
+  add(recipe: IRecipe): void {
+    this.cartRecipe=localStorage.getItem('cartRecipe')?JSON.parse(localStorage.getItem('cartRecipe')!):[];
+    this.cartRecipe.push(recipe);
+
+    localStorage.setItem('cartRecipe', JSON.stringify(this.cartRecipe));
+
+    alert(`${recipe.title} has been added to your saved recipes!`);
   }
 }

@@ -11,12 +11,7 @@ import { map } from 'rxjs';
 })
 export class CategoryItemsComponent implements OnInit {
 
-  recipes!:IRecipe[];
-  category:IRecipe[]=[];
-  ngOnInit(): void {
-    let  recipeService =new DataService;
-    this.recipes = recipeService.getRecipe();
-  }
+
 
   categories:ICategory[] = [
     {
@@ -63,6 +58,41 @@ export class CategoryItemsComponent implements OnInit {
 
   ]
 
+
+recipes!: IRecipe[];
+  filteredRecipes: IRecipe[] = [];
+
+
+  ngOnInit(): void {
+    let recipeService = new DataService();
+    this.recipes = recipeService.getRecipe();
+  }
+
+  filterByRecipe(recipe: IRecipe): void {
+    this.filteredRecipes = this.recipes.filter(r => r.mainIngredient === recipe.mainIngredient);
+  }
+
+  getUniqueRecipes(ingredientsToRemove: string[] = []) {
+        const uniqueIngredients = new Set();
+
+        return this.recipes.filter(recipe => {
+
+          const mainIngredient = recipe.mainIngredient?.trim();
+          if (mainIngredient && ingredientsToRemove.includes(mainIngredient)) {
+            return false;
+          }
+
+
+          if (mainIngredient && !uniqueIngredients.has(mainIngredient)) {
+            uniqueIngredients.add(mainIngredient);
+            return true;
+          }
+
+          return false;
+        });
+      };
+
+  constructor(private _dataService: DataService) { }
   dishDetails:any={};
   addDetails(el:IRecipe){
     this.dishDetails={
@@ -76,30 +106,15 @@ export class CategoryItemsComponent implements OnInit {
 
 
   }
-  getUniqueRecipes(ingredientsToRemove: string[] = []) {
-    const uniqueIngredients = new Set();
+  cartRecipe:any[]=[];
+  add(recipe: IRecipe): void {
+    this.cartRecipe=localStorage.getItem('cartRecipe')?JSON.parse(localStorage.getItem('cartRecipe')!):[];
+    this.cartRecipe.push(recipe);
 
-    return this.recipes.filter(recipe => {
-      // تحقق مما إذا كانت mainIngredient موجودة وتخطي إذا كانت في ingredientsToRemove
-      const mainIngredient = recipe.mainIngredient?.trim();
-      if (mainIngredient && ingredientsToRemove.includes(mainIngredient)) {
-        return false; // تجاهل الوصفة إذا كانت تساوي أي من العناصر المراد إزالتها
-      }
+    localStorage.setItem('cartRecipe', JSON.stringify(this.cartRecipe));
 
-      // تحقق من أن mainIngredient ليس فارغًا
-      if (mainIngredient && !uniqueIngredients.has(mainIngredient)) {
-        uniqueIngredients.add(mainIngredient);
-        return true; // احتفظ بالوصفة
-      }
-
-      return false; // تجاهل الوصفات الفارغة أو المكررة
-    });
-  };
-
-  constructor(private _dataService:DataService
-  ){ }
-sendDet(el:IRecipe):void{
-    this._dataService.categoryDetails;
+    alert(`${recipe.title} has been added to your saved recipes!`);
+  }
 }
 
-}
+

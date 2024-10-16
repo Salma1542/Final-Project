@@ -1,6 +1,7 @@
 import { Component, ElementRef, viewChild } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { IRecipe } from '../interfaces/recipes';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -25,4 +26,15 @@ export class NavbarComponent {
 
     // },1000);
   }
+
+
+  constructor(private router: Router) {}
+
+
+
+  openRecipeDetails(recipe: IRecipe): void {
+    localStorage.setItem('selectedRecipe', JSON.stringify(recipe));
+    this.router.navigate(['/details']);
+}
+
 }

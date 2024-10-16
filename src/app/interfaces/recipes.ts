@@ -1,6 +1,6 @@
 export interface IRecipe {
   id?: number|null | null,
-  title?: string |null,
+  title?: string ,
   course?: string | null,
   cuisine?: string | null,
   mainIngredient?: string | null |undefined,

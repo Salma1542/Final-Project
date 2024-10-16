@@ -6,8 +6,8 @@ import { IRecipe } from '../interfaces/recipes';
 })
 export class SearchPipe implements PipeTransform {
 
-  transform(arr:IRecipe[], filterTitle:string): IRecipe[] {
-    return arr.filter((recipes:IRecipe) => recipes.title?.includes(filterTitle));
+  transform(arr:IRecipe[], filterName:string): IRecipe[] {
+    return arr.filter((recipes:IRecipe) => recipes.title?.toLowerCase().includes(filterName));
   }
 
 }
