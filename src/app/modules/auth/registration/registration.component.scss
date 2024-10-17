@@ -55,4 +55,8 @@ form{
     box-shadow: 2px 2px 5px rgb(211, 211, 211);
 }
 
-
+@media (max-width:470px) {
+  h2{
+ font-size: 15px;
+   }
+ }

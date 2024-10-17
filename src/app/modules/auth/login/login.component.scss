@@ -52,5 +52,15 @@ form{
   // background-image: url("src/assets/images/wall.webp");
 
 }
+@media (max-width:430px) {
+ .register-now a{
+font-size: 13px;
+  }
+}
+@media (max-width:390px) {
+  .register-now a{
+ font-size: 10px;
+   }
+ }
 
 
