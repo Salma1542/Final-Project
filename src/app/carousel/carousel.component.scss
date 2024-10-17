@@ -5,7 +5,7 @@
     width: 250px;
 }
 .cl{
-    height: 80vh;
+    min-height: 60vh;
 
 }
 .carousel {
@@ -13,7 +13,7 @@
     justify-content: space-between;
     // margin-top: 50px;
   }
-  
+
   .slide {
     flex: 1;
     margin: 10px;
@@ -22,7 +22,7 @@
     overflow: hidden;
 
   }
-  
+
   .card-img {
     width: 100%;
     object-fit: cover;
