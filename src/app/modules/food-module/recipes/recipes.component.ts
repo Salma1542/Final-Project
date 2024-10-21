@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
-import { IRecipe } from '../interfaces/recipes';
-import { AuthService } from '../services/auth.service';
+import { DataService } from '../../../services/data.service';
+import { IRecipe } from '../../../interfaces/recipes';
+import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({

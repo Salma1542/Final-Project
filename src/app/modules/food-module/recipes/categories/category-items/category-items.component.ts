@@ -1,9 +1,10 @@
 import { Component, DoCheck, Input, OnInit, Output } from '@angular/core';
-import { IRecipe } from '../../../interfaces/recipes';
-import { ICategory } from '../../../interfaces/category';
-import { DataService } from '../../../services/data.service';
+
 import { EventEmitter } from 'stream';
 import { map } from 'rxjs';
+import { ICategory } from '../../../../../interfaces/category';
+import { IRecipe } from '../../../../../interfaces/recipes';
+import { DataService } from '../../../../../services/data.service';
 @Component({
   selector: 'app-category-items',
   templateUrl: './category-items.component.html',
