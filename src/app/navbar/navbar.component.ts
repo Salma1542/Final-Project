@@ -2,6 +2,7 @@ import { Component, ElementRef, viewChild } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { IRecipe } from '../interfaces/recipes';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -10,25 +11,19 @@ import { Router } from '@angular/router';
 export class NavbarComponent {
   filterName: string = '';
   recipes:IRecipe[]=[];
-// placeValue: string='';
-// index:number=0;
-// placeArray:string[]=['w','h','a','t',' ','W','o','u','l','d',' ','Y','o','u',' ','L','i','k','e',' ','T','o',' ','C','o','o','k'];
+  isProfileVisible: boolean = false;
+
   ngOnInit(): void {
     let dataService= new DataService;
     this.recipes = dataService.getRecipe();
 
-    // setInterval(()=>{
-    //   if(this.index < this.placeArray.length){
-    //   this.placeValue.concat(this.placeArray[this.index++]);}
-    //   else{
-    //     this.index=0;
-    //   }
 
-    // },1000);
+    this.isProfileVisible = this.showProfile();
+
   }
 
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
 
 
@@ -36,5 +31,15 @@ export class NavbarComponent {
     localStorage.setItem('selectedRecipe', JSON.stringify(recipe));
     this.router.navigate(['/details']);
 }
+  showProfile():boolean {
+    if (this.authService.isAuthenticated(JSON.parse(localStorage.getItem('regData')!).length) ) {
+      return true;
+
+    }
+    else{
+      return false;
+    }
+}
+
 
 }

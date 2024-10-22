@@ -1,6 +1,6 @@
 import { Component, DoCheck } from '@angular/core';
-import { IRecipe } from '../../../interfaces/recipes';
-import { DataService } from '../../../services/data.service';
+import { IRecipe } from '../../../../../interfaces/recipes';
+import { DataService } from '../../../../../services/data.service';
 
 @Component({
   selector: 'app-recipe-category',

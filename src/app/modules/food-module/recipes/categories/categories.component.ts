@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DataService } from '../../services/data.service';
-import { IRecipe } from '../../interfaces/recipes';
+import { DataService } from '../../../../services/data.service';
+import { IRecipe } from '../../../../interfaces/recipes';
 
 @Component({
   selector: 'app-categories',

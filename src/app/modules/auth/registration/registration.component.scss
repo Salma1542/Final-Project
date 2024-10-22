@@ -45,5 +45,18 @@ form label{
 }
 .registration{
   height: 100vh;
+  width: 100%;
 }
 
+form{
+
+    padding: 50px 100px 50px 100px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(211, 211, 211);
+}
+
+@media (max-width:470px) {
+  h2{
+ font-size: 15px;
+   }
+ }

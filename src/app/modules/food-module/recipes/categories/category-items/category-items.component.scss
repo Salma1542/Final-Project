@@ -3,7 +3,7 @@ section{
 }
 .cat-logo{
   height: 280px;
-  background-image: url(../../../../assets/images/categories.jpg);
+  background-image: url(/assets/images/categories.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -43,6 +43,7 @@ a{
 }
 .card-recipe{
   width: 300px ;
+  height: 450px;
   border: solid 1px #952d5044;
   border-radius: 15px;
   overflow: hidden;
@@ -76,3 +77,10 @@ input:focus{
   box-shadow: none;
   cursor: pointer;
 }
+i{
+
+  border: 1px solid orange;
+}
+span{
+  padding: 10px 0;
+  }

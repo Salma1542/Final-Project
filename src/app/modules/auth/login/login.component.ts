@@ -21,7 +21,7 @@ if (form.value.username === (this.items[index].fname +' '+ this.items[index].lna
   if(form.value.password === (this.items[index].password)){
 this.check=true;
 console.log("ok");
-this.ifPassed="/recipes"
+this.ifPassed="/food-module/recipes"
   }
   else{
   }

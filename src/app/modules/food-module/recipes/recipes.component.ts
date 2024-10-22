@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
-import { IRecipe } from '../interfaces/recipes';
-import { AuthService } from '../services/auth.service';
+import { DataService } from '../../../services/data.service';
+import { IRecipe } from '../../../interfaces/recipes';
+import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -21,6 +21,7 @@ export class RecipesComponent implements OnInit {
   directions:string = '';
   photoUrl:string = '';
   modal: string= "exampleModal1";
+  addToProfile:any=[];
 
   ngOnInit(): void {
     let dataService= new DataService;
@@ -64,6 +65,18 @@ export class RecipesComponent implements OnInit {
         'tags': null,
       }
     )
+    this.addToProfile= localStorage.getItem('addToProfile')?JSON.parse(localStorage.getItem('addToProfile')!):[];
+    this.addToProfile.push({
+    title:this.title,
+    cookTime:this.cookTime,
+    photoUrl:this.photoUrl,
+    course:this.course,
+    ingredients:this.ingredients,
+    directions:this.directions,
+    });
+    localStorage.setItem('addToProfile',JSON.stringify(this.addToProfile));
+
+
     this.title = '';
     this.course = '';
     this.cookTime = 0;
@@ -82,11 +95,7 @@ export class RecipesComponent implements OnInit {
       photoUrl:el.photoUrl,
     }
     localStorage.setItem('dishDetails',JSON.stringify(this.dishDetails));
-
-
   }
-
-
 
   constructor(private authService: AuthService) {}
 
