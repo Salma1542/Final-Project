@@ -1,0 +1,56 @@
+<div class="main">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="d-flex flex-column align-items-center p-3 contain">
+          <h1 class="letter mb-3">{{letter}}</h1>
+          <div class="info d-flex flex-column align-items-center">
+            <p >{{name}}</p>
+            <p>{{email}}</p>
+            <p>Number of posts: {{numOfPosts}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-6 col-sm-12">
+        <div class="row ">
+          <ng-container *ngFor="let post of profilePosts">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <div class="card d-flex flex-column justify-content-between">
+                <a
+                  [routerLink]="['/details']"
+                  (click)="addDetails(post)"
+                  class="text-decoration-none"
+                >
+                  <div class="w-100 image">
+                    <img
+                      [src]="post.photoUrl"
+                      class="card-img-top w-100 h-100 img-fluid"
+                    />
+                  </div>
+                </a>
+                <div class="p-3 justify-content-around">
+                  <h5 class="card-title">{{ post.title }}</h5>
+                  <p>{{ post.course }}</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <span
+                      class="badge rounded-pill text-bg-warning align-items-center px-4"
+                      >{{ post.cookTime }} minutes</span
+                    >
+                    <i
+                      class="fa fa-bookmark-o p-2 rounded-pill"
+                      aria-hidden="true"
+
+                      (click)="add(post)"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
