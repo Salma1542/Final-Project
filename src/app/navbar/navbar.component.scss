@@ -2,22 +2,21 @@
     border-bottom: 1px solid gray;
     padding: 15px;
 }
-.social-icons i ,.user-icons i{
+.social-icons i ,.user-icons i,i{
 margin-left: 27px;
 font-size: 18px;
 color: gray;
 }
-.user-icons i{
-    color: black;
-    font-size: 26px;
+i:active{
+  background-color: orange;
+  color: white;
 }
 .search{
     border-right: 1px solid black;
     padding: 8px;
 }
 
-.second-main{
-}
+
 .login{
     text-decoration: none;
     color: black;
@@ -97,8 +96,8 @@ color: gray;
     cursor: pointer;
   }
   .search li:active{
-    background-color: #FF535B;
-    color: orange;
+    background-color: orange;
+    color: white;
     border: none;
   }
 
@@ -110,3 +109,13 @@ color: gray;
     outline: 1px solid rgb(33, 32, 31);
 
   }
+.profile{
+  border: none;
+  background-color: transparent;
+  font-size: 40px;
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}

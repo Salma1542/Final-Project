@@ -49,11 +49,12 @@
           <ng-container *ngIf="filterName.length > 0">
             <ul class="list-group">
               <li
-                class="list-group-item"
+                class="list-group-item "
                 *ngFor="let c of recipes | search : filterName"
-                (click)="openRecipeDetails(c)"
+                (click)="addDetails(c)"
+                [routerLink]="['/details']"
               >
-                {{ c.title ?? "Unnamed Recipe" }}
+                {{ c.title}}
               </li>
             </ul>
           </ng-container>
@@ -108,7 +109,14 @@
               >About Us</a
             >
           </li>
-          <li class="nav-item">
+        </ul>
+        <form class="d-flex align-items-center" role="search">
+          <button type="button" class="btn light login p-2">
+            <a class="text-decoration-none p-2" [routerLink]="['/auth']"
+              >Login</a
+            >
+          </button>
+          <a class="nav-item profile">
             <ng-container *ngIf="isProfileVisible == true">
               <a
                 class="nav-link"
@@ -118,17 +126,7 @@
               >
                 <i class="fa fa-user fs-1 ms-1"></i> </a
             ></ng-container>
-          </li>
-        </ul>
-        <form class="d-flex align-items-center" role="search">
-          <button type="button" class="btn light login p-2">
-            <a class="text-decoration-none p-2" [routerLink]="['/auth']"
-              >Login</a
-            >
-          </button>
-          <button type="button" class="btn fw-light secondary p-1">
-            Subscribe
-          </button>
+          </a>
         </form>
       </div>
     </div>

@@ -27,10 +27,19 @@ export class NavbarComponent {
 
 
 
-  openRecipeDetails(recipe: IRecipe): void {
-    localStorage.setItem('selectedRecipe', JSON.stringify(recipe));
-    this.router.navigate(['/details']);
-}
+  dishDetails:any={};
+  addDetails(el:IRecipe){
+    this.dishDetails={
+      title: el.title,
+      cooktime: el.cookTime,
+      ingredients: el.ingredients,
+      directions:el.directions,
+      photoUrl:el.photoUrl,
+    }
+    localStorage.setItem('dishDetails',JSON.stringify(this.dishDetails));
+
+
+  }
   showProfile():boolean {
     if (this.authService.isAuthenticated(JSON.parse(localStorage.getItem('regData')!).length) ) {
       return true;
